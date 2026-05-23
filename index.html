@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kaan Party</title>
+
+<link rel="icon" href="icon.png">
+
+<style>
+body {
+  background-color: #f6f1e7;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.box {
+  background-color: #f0e0d6;
+  border: 1px solid #800;
+  padding: 12px;
+  width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #800;
+}
+
+.boards-label {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 12px;
+  color: #800;
+}
+
+.quote {
+  color: #789922;
+  margin: 2px 0;
+}
+
+.file {
+  margin-top: 10px;
+}
+
+button {
+  background-color: #d6daf0;
+  border: 1px solid #b7c5d9;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+#image {
+  max-width: 150px;
+  cursor: pointer;
+  display: block;
+  margin: 5px auto;
+}
+
+.boards a,
+.board-list a,
+.taskbar a {
+  color: #800;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.change-date{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:6px;
+}
+
+.change-date img{
+  width:32px;      /* change size */
+  height:auto;
+}
+
+.boards a:hover,
+.board-list a:hover,
+.taskbar a:hover {
+  text-decoration: underline;
+}
+
+.board-list p {
+  margin: 4px 0;
+}
+
+/* floating gif box */
+.winbox {
+  position: fixed;
+  bottom: 55px;
+  right: 15px;
+  width: 220px;
+  background: #f0e0d6;
+  border: 1px solid #800;
+  box-shadow: 3px 3px 0 #d9bfb7;
+}
+
+.win-title {
+  background: #d6daf0;
+  color: #800;
+  font-weight: bold;
+  padding: 4px 6px;
+  border-bottom: 1px solid #800;
+  text-align: left;
+  font-size: 13px;
+}
+
+.win-content {
+  padding: 8px;
+}
+
+.win-content img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* TASKBAR */
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #f0e0d6;
+  border-top: 1px solid #800;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+
+  z-index: 99999;
+}
+
+.start-btn {
+  background: #d6daf0;
+  border: 1px solid #800;
+  padding: 2px 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.start-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+.nav-btn {
+  background: #d6daf0;
+  border: 1px solid #b7c5d9;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.clock {
+  margin-left: auto;
+  color: #800;
+  font-weight: bold;
+  padding-right: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <div class="boards-label">Boards</div>
+
+  <h1>Welcome to Kaan Party!</h1>
+
+  <p class="quote">>Be a chud or dont</p>
+  <p class="quote">>This website has NO Troonslop/Tranny Fags.</p>
+  <p class="quote">>Posting will no longer be added because there is no database lol</p>
+  <p class="quote">>Caution there are Graphic Content some people might find disturbing.</p>
+  
+
+  <p>This is an archive website.</p>
+
+  <div class="file">
+    <button onclick="toggleFile()">[Expand File]</button>
+    <img id="image" src="poojak.gif">
+  </div>
+
+  <div class="file boards">
+    <a href="images_archive.html">/i/ - Images</a> |
+    <a href="videos_archive.html">/v/ - Videos</a> |
+    <a href="massshoot.html">/ms/ - Mass Shootings</a> |
+    <a href="kaanjak.html">/kaan/ - Kaanjaks</a> |
+    <a href="geo.html">/geo/ - GeoCities</a> |
+    <a href="pingu.html">/pu/ - Pingu</a> |
+    <a href="posts.html">/p/ - Posts</a>
+  </div>
+</div>
+
+<div class="box" style="margin-top:15px; text-align:left;">
+<div class="change-date">
+  <strong>19 May 2026</strong>
+  <img src="changelog.gif">
+  
+</div>
+
+  <p class="quote">> Added /p/ - Posts</p>
+  <p class="quote">> Updated functions in /p/ - Posts</p>
+  <p class="quote">> Added new database for posting (PocketBase)</p>
+
+  <hr>
+
+  <p><strong>17 May 2026</strong></p>
+  <p class="quote">> Added /pu/ - Pingu</p>
+
+  <hr>
+
+  <p><strong>30 Apr 2026</strong></p>
+  <p class="quote">> Removed /p/ - Posts</p>
+  <p class="quote">> Added /ms/ - Mass Shootings</p>
+
+  <hr>
+
+  <p><strong>16 Apr 2026</strong></p>
+  <p class="quote">> Removed /t/ - Troonslop</p>
+  <p class="quote">> Added more features in /p/ - Posts</p>
+
+  <hr>
+
+  <p><strong>15 Apr 2026</strong></p>
+  <p class="quote">> Added /geo/ - GeoCities</p>
+  <p class="quote">> Added /kaan/ - Kaanjaks</p>
+  <p class="quote">> Minor updates in /p/ - Posts</p>
+</div>
+
+<div class="box board-list" style="margin-top:15px; text-align:left;">
+  <h1>Board Directory</h1>
+
+  <p><a href="images_archive.html">/i/</a> - Images Archive</p>
+  <p><a href="videos_archive.html">/v/</a> - Video Archive</p>
+  <p><a href="massshoot.html">/ms/</a> - Mass Shootings</p>
+  <p><a href="kaanjak.html">/kaan/</a> - Kaanjaks</p>
+  <p><a href="geo.html">/geo/</a> - GeoCities</p>
+  <p><a href="pingu.html">/pu/</a> - Pingu</p>
+  <p><a href="posts.html">/p/</a> - Posts</p>
+</div>
+
+<!-- floating gif box -->
+<div class="winbox">
+  <div class="win-title">The Weekly Jak</div>
+  <div class="win-content">
+    <img src="24009 - soybooru.com - angry animated big_eyebrows clean_dance cryboy_soyjak crying dance soyak soyjak.gif">
+  </div>
+</div>
+
+<!-- TASKBAR -->
+<div class="taskbar">
+
+  <div class="start-btn">
+    <img src="icon.png">
+  </div>
+
+  <a class="nav-btn" href="index.html">Home</a>
+  <a class="nav-btn" href="massshoot.html">/ms/</a>
+  <a class="nav-btn" href="images_archive.html">/i/</a>
+  <a class="nav-btn" href="videos_archive.html">/v/</a>
+  <a class="nav-btn" href="geo.html">/geo/</a>
+  <a class="nav-btn" href="kaanjak.html">/kaan/</a>
+  <a class="nav-btn" href="pingu.html">/pu/</a>
+  <a class="nav-btn" href="posts.html">/p/</a>
+
+  <div class="clock" id="clock">00:00</div>
+</div>
+
+<div class="box board-list" style="margin-top:15px; text-align:left;">
+  <h1>Rules - Mostly for /p/</h1>
+
+  <p>1. You will NOT share this website with strangers who can potentially raid or dox the creator of this website.</p>
+  <p>2. You will NOT post 'p or any other content that could be considered illegal.</p>
+  <p>3. You will NOT advertise your stuff on this website.</p>
+</div>
+
+<script>
+function toggleFile() {
+  const img = document.getElementById("image");
+
+  if (img.style.maxWidth === "150px" || img.style.maxWidth === "") {
+    img.style.maxWidth = "500px";
+  } else {
+    img.style.maxWidth = "150px";
+  }
+}
+
+function updateClock() {
+  const now = new Date();
+  let h = now.getHours().toString().padStart(2, "0");
+  let m = now.getMinutes().toString().padStart(2, "0");
+  document.getElementById("clock").textContent = h + ":" + m;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>

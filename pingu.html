@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kaan Party</title>
+
+  <link rel="icon" href="icon.png">
+
+  <style>
+    body {
+      background-color: #f6f1e7;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 20px;
+    }
+
+    .top-ad {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .top-ad img {
+        display: block;
+        margin: 0 auto;
+        max-width: 468px;
+        height: auto;
+    }
+    
+    .box {
+      background-color: #f0e0d6;
+      border: 1px solid #800;
+      padding: 12px;
+      width: 600px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      color: #800;
+    }
+
+    .fileinfo {
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    img, video {
+      max-width: 150px;
+      display: block;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+
+    button {
+      margin-top: 5px;
+    }
+
+    .nav {
+      margin-bottom: 10px;
+    }
+
+    .nav a {
+      color: #800;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+<style>
+body{
+  background:#f6f1e7;
+  font-family:Arial, Helvetica, sans-serif;
+  margin:20px;
+  padding-top:55px; /* room for top bar */
+}
+
+/* top board panel */
+.top-panel{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:#800;
+  border-bottom:2px solid #5f0000;
+  padding:8px 10px;
+  box-sizing:border-box;
+  z-index:9999;
+  text-align:center;
+}
+
+/* links */
+.top-panel a{
+  color:#f6f1e7;
+  text-decoration:none;
+  font-weight:bold;
+  margin:0 8px;
+  font-size:14px;
+}
+
+.top-panel a:hover{
+  text-decoration:underline;
+}
+</style>
+</head>
+<body>
+
+<div class="top-panel">
+  <a href="index.html">Home</a>
+  <a href="images_archive.html">/i/</a>
+  <a href="videos_archive.html">/v/</a>
+  <a href="kaanjak.html">/kaan/</a>
+  <a href="massshoot.html">/ms/</a>
+  <a href="geo.html">/geo/</a>
+  <a href="posts.html">/p/</a>
+</div>
+
+  <div class="top-ad">
+    <img src="pingu_.png">
+    <img src="hazard_.png">
+  </div>
+
+  <h1>/pu/ - Pingu</h1>
+
+  <div class="nav">
+    <a href="index.html">[Return]</a>
+    <a href="videos_archive.html">/v/ - Videos</a>
+    <a href="images_archive.html">/i/ - Images</a>
+    <a href="geo.html">/geo/ - GeoCities</a>
+    <a href="massshoot.html">/ms/ - Mass Shootings</a>
+    <a href="kaanjak.html">/kaan/ - Kaanjaks</a>
+  </div>
+
+  <!-- IMAGE POST -->
+  <div class="box">
+    <p><strong>Kaan</strong></p>
+    <p class="fileinfo" id="info1">Loading...</p>
+    <button onclick="toggleMedia(this)">[Expand File]</button>
+    <img src="Pingu/8ed64988f0abbf385733b87e57394c9b.jpg"
+         onload="loadImageInfo(this, 'info1')">
+  </div>
+
+  <div class="box">
+    <p><strong>Kaan</strong></p>
+    <p class="fileinfo" id="info2">Loading...</p>
+    <button onclick="toggleMedia(this)">[Expand File]</button>
+    <video controls
+      src="Pingu/lol_pingu.mp4"
+      onloadedmetadata="loadVideoInfo(this, 'info2')">
+    </video>
+  </div>
+
+  <div class="box">
+    <p><strong>Kaan</strong></p>
+    <p class="fileinfo" id="info3">Loading...</p>
+    <button onclick="toggleMedia(this)">[Expand File]</button>
+    <img src="Pingu/pingu_flammen.png"
+         onload="loadImageInfo(this, 'info3')">
+  </div>
+
+  <div class="box">
+    <p><strong>Kaan</strong></p>
+    <p class="fileinfo" id="info4">Loading...</p>
+    <button onclick="toggleMedia(this)">[Expand File]</button>
+    <img src="Pingu/v4uq9zehp6y21.png"
+         onload="loadImageInfo(this, 'info4')">
+  </div>
+
+  <div class="box">
+    <p><strong>Kaan</strong></p>
+    <p class="fileinfo" id="info5">Loading...</p>
+    <button onclick="toggleMedia(this)">[Expand File]</button>
+    <video controls
+      src="Pingu/pingu_laughter.mp4"
+      onloadedmetadata="loadVideoInfo(this, 'info5')">
+    </video>
+  </div>
+
+  <div class="box">
+    <p><strong>Kaan</strong></p>
+    <p class="fileinfo" id="info6">Loading...</p>
+    <button onclick="toggleMedia(this)">[Expand File]</button>
+    <video controls
+      src="Pingu/pingu_terrorism.mp4"
+      onloadedmetadata="loadVideoInfo(this, 'info6')">
+    </video>
+  </div>
+
+  <div class="box">
+    <p><strong>Kaan</strong></p>
+    <p class="fileinfo" id="info7">Loading...</p>
+    <button onclick="toggleMedia(this)">[Expand File]</button>
+    <video controls
+      src="Pingu/pingu_ytp.mp4"
+      onloadedmetadata="loadVideoInfo(this, 'info7')">
+    </video>
+  </div>
+
+  <div class="box">
+    <p><strong>Kaan</strong></p>
+    <p class="fileinfo" id="info8">Loading...</p>
+    <button onclick="toggleMedia(this)">[Expand File]</button>
+    <video controls
+      src="Pingu/pingu_ytp_full.mp4"
+      onloadedmetadata="loadVideoInfo(this, 'info8')">
+    </video>
+  </div>
+
+  <div class="box">
+    <p><strong>Kaan</strong></p>
+    <p class="fileinfo" id="info9">Loading...</p>
+    <button onclick="toggleMedia(this)">[Expand File]</button>
+    <video controls
+      src="Pingu/as.mp4"
+      onloadedmetadata="loadVideoInfo(this, 'info9')">
+    </video>
+  </div>
+
+<script>
+  function toggleMedia(button) {
+    const el = button.nextElementSibling;
+
+    if (el.style.maxWidth === "150px" || el.style.maxWidth === "") {
+      el.style.maxWidth = "500px";
+      if (el.tagName === "VIDEO") el.play();
+    } else {
+      el.style.maxWidth = "150px";
+      if (el.tagName === "VIDEO") el.pause();
+    }
+  }
+
+  async function loadImageInfo(img, id) {
+    try {
+      const res = await fetch(img.src);
+      const blob = await res.blob();
+
+      const size = (blob.size / 1024).toFixed(1);
+      const name = img.src.split('/').pop();
+
+      document.getElementById(id).textContent =
+        `File: ${name} (${size} KB, ${img.naturalWidth}x${img.naturalHeight})`;
+    } catch {
+      document.getElementById(id).textContent = "Failed to load info";
+    }
+  }
+
+  function loadVideoInfo(video, id) {
+    const name = video.src.split('/').pop();
+    const duration = video.duration.toFixed(1);
+
+    document.getElementById(id).textContent =
+      `File: ${name} (${video.videoWidth}x${video.videoHeight}, ${duration}s)`;
+  }
+</script>
+
+</body>
+</html>
