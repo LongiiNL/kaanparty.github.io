@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kaan Party</title>
+
+  <link rel="icon" href="icon.png">
+
+  <style>
+    body {
+      background-color: #f6f1e7;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 20px;
+    }
+
+    .top-ad {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .top-ad img {
+        display: block;
+        margin: 0 auto;
+        max-width: 468px;
+        height: auto;
+    }
+
+    .box {
+      background-color: #f0e0d6;
+      border: 1px solid #800;
+      padding: 12px;
+      width: 600px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      color: #800;
+    }
+
+    .nav {
+      margin-bottom: 10px;
+    }
+
+    .nav a {
+      color: #800;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    video {
+      max-width: 150px;
+      display: block;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+
+    button {
+      margin-top: 5px;
+    }
+
+    .fileinfo {
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+  </style>
+
+<style>
+body{
+  background:#f6f1e7;
+  font-family:Arial, Helvetica, sans-serif;
+  margin:20px;
+  padding-top:55px; /* room for top bar */
+}
+
+/* top board panel */
+.top-panel{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:#800;
+  border-bottom:2px solid #5f0000;
+  padding:8px 10px;
+  box-sizing:border-box;
+  z-index:9999;
+  text-align:center;
+}
+
+/* links */
+.top-panel a{
+  color:#f6f1e7;
+  text-decoration:none;
+  font-weight:bold;
+  margin:0 8px;
+  font-size:14px;
+}
+
+.top-panel a:hover{
+  text-decoration:underline;
+}
+</style>
+</head>
+<body>
+
+<div class="top-panel">
+  <a href="index.html">Home</a>
+  <a href="massshoot.html">/ms/</a>
+  <a href="images_archive.html">/i/</a>
+  <a href="kaanjak.html">/kaan/</a>
+  <a href="geo.html">/geo/</a>
+  <a href="pingu.html">/pu/</a>
+  <a href="videos_archive.html">/v/</a>
+  <a href="2023.html">/2023/</a>
+  <a href="2025.html">/2025/</a>
+</div>
+
+  <div class="top-ad">
+    <img src="stub.gif">
+    <img src="warning_ms.gif">
+    <img src="hazard_.png">
+  </div>
+
+  <h1>/2024/ - 2024</h1>
+
+  <div class="nav">
+    <a href="index.html">[Return]</a>
+    <a href="images_archive.html">/i/ - Images</a>
+    <a href="geo.html">/geo/ - GeoCities</a>
+    <a href="kaanjak.html">/kaan/ - Kaanjaks</a>
+    <a href="massshoot.html">/ms/ - Mass Shootings</a>
+  </div>
+
+  <!-- POSTS -->
+  <!-- Just duplicate this block for new videos -->
+
+  <div class="box">
+    <p><strong>Kaan</strong></p>
+    <p class="fileinfo" id="info1">Loading...</p>
+    <button onclick="toggleVideo(this)">[Expand File]</button>
+    <video controls preload="metadata" src="2024/0128 (1)(3).mp4"
+      onloadedmetadata="loadVideoInfo(this, 'info1')"></video>
+  </div>
+
+  <div class="box">
+    <p><strong>Kaan</strong></p>
+    <p class="fileinfo" id="info2">Loading...</p>
+    <button onclick="toggleVideo(this)">[Expand File]</button>
+    <video controls preload="metadata" src="2024/l;ing.mp4"
+      onloadedmetadata="loadVideoInfo(this, 'info2')"></video>
+  </div>
+
+  <div class="box">
+    <p><strong>Kaan</strong></p>
+    <p class="fileinfo" id="info3">Loading...</p>
+    <button onclick="toggleVideo(this)">[Expand File]</button>
+    <video controls preload="metadata" src="2024/0104 (2)(5).mp4"
+      onloadedmetadata="loadVideoInfo(this, 'info3')"></video>
+  </div>
+
+  <div class="box">
+    <p><strong>Kaan</strong></p>
+    <p class="fileinfo" id="info4">Loading...</p>
+    <button onclick="toggleVideo(this)">[Expand File]</button>
+    <video controls preload="metadata" src="2024/bow.mp4"
+      onloadedmetadata="loadVideoInfo(this, 'info4')"></video>
+  </div>
+
+  <div class="box">
+    <p><strong>Kaan</strong></p>
+    <p class="fileinfo" id="info5">Loading...</p>
+    <button onclick="toggleVideo(this)">[Expand File]</button>
+    <video controls preload="metadata" src="2024/naamloos.webm"
+      onloadedmetadata="loadVideoInfo(this, 'info5')"></video>
+  </div>
+
+  <!-- ADD MORE LIKE ABOVE -->
+
+<script>
+  function toggleVideo(button) {
+    const vid = button.nextElementSibling;
+
+    if (vid.style.maxWidth === "150px" || vid.style.maxWidth === "") {
+      vid.style.maxWidth = "500px";
+      vid.play();
+    } else {
+      vid.style.maxWidth = "150px";
+      vid.pause();
+    }
+  }
+
+  function goHome() {
+    window.location.href = "index.html";
+  }
+
+  function loadVideoInfo(video, id) {
+    const info = document.getElementById(id);
+
+    if (!info) return;
+
+    const width = video.videoWidth;
+    const height = video.videoHeight;
+    const duration = video.duration ? video.duration.toFixed(1) : "?";
+    const name = video.src.split('/').pop();
+
+    info.textContent =
+      `File: ${name} (${width}x${height}, ${duration}s)`;
+  }
+</script>
+
+</body>
+</html>
