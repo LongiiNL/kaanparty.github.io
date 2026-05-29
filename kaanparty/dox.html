@@ -25,6 +25,17 @@
         height: auto;
     }
 
+    .nav {
+      margin-bottom: 10px;
+    }
+
+    .nav a {
+      color: #800;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
     .box {
       background-color: #f0e0d6;
       border: 1px solid #800;
@@ -37,22 +48,11 @@
       color: #800;
     }
 
-    .nav {
-      margin-bottom: 10px;
-    }
-
-    .nav a {
-      color: #800;
-      text-decoration: none;
-      font-weight: bold;
-      margin-right: 10px;
-    }
-
-    video {
+    .image {
       max-width: 150px;
+      cursor: pointer;
       display: block;
       margin-top: 5px;
-      cursor: pointer;
     }
 
     button {
@@ -63,6 +63,48 @@
       font-size: 12px;
       margin-bottom: 5px;
     }
+
+    .taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #f0e0d6;
+  border-top: 1px solid #800;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.start-btn {
+  background: #d6daf0;
+  border: 1px solid #800;
+  padding: 2px 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.start-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+.nav-btn {
+  background: #d6daf0;
+  border: 1px solid #b7c5d9;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.clock {
+  margin-left: auto;
+  color: #800;
+  font-weight: bold;
+  padding-right: 8px;
+}
   </style>
 
 <style>
@@ -107,87 +149,55 @@ body{
   <a href="index.html">Home</a>
   <a href="massshoot.html">/ms/</a>
   <a href="images_archive.html">/i/</a>
+  <a href="videos_archive.html">/v/</a>
   <a href="kaanjak.html">/kaan/</a>
   <a href="geo.html">/geo/</a>
   <a href="pingu.html">/pu/</a>
-  <a href="videos_archive.html">/v/</a>
   <a href="2023.html">/2023/</a>
+  <a href="2024.html">/2024/</a>
   <a href="2025.html">/2025/</a>
   <a href="defigga.html">/da/</a>
-  <a href="dox.html">/dox/</a>
 </div>
 
   <div class="top-ad">
-    <img src="stub.gif">
-    <img src="warning_ms.gif">
-    <img src="hazard_.png">
+    <img src="dox_.png" alt="ad">
   </div>
 
-  <h1>/2024/ - 2024</h1>
+  <h1>/dox/ - Dox 'ape and Kill</h1>
 
   <div class="nav">
     <a href="index.html">[Return]</a>
-    <a href="images_archive.html">/i/ - Images</a>
+    <a href="videos_archive.html">/v/ - Videos</a>
     <a href="geo.html">/geo/ - GeoCities</a>
     <a href="kaanjak.html">/kaan/ - Kaanjaks</a>
     <a href="massshoot.html">/ms/ - Mass Shootings</a>
   </div>
 
-  <!-- POSTS -->
-  <!-- Just duplicate this block for new videos -->
+
+  <!-- TEMPLATE: copy this box for new images -->
 
   <div class="box">
     <p><strong>Kaan</strong></p>
     <p class="fileinfo" id="info1">Loading...</p>
-    <button onclick="toggleVideo(this)">[Expand File]</button>
-    <video controls preload="metadata" src="2024/0128 (1)(3).mp4"
-      onloadedmetadata="loadVideoInfo(this, 'info1')"></video>
+    <button onclick="toggleFile(this)">[Expand File]</button>
+    <img src="dox/siofag.jpg" class="image" onload="loadInfo(this, 'info1')">
   </div>
 
   <div class="box">
     <p><strong>Kaan</strong></p>
     <p class="fileinfo" id="info2">Loading...</p>
-    <button onclick="toggleVideo(this)">[Expand File]</button>
-    <video controls preload="metadata" src="2024/l;ing.mp4"
-      onloadedmetadata="loadVideoInfo(this, 'info2')"></video>
+    <button onclick="toggleFile(this)">[Expand File]</button>
+    <img src="dox/faggots.jpg" class="image" onload="loadInfo(this, 'info2')">
   </div>
-
-  <div class="box">
-    <p><strong>Kaan</strong></p>
-    <p class="fileinfo" id="info3">Loading...</p>
-    <button onclick="toggleVideo(this)">[Expand File]</button>
-    <video controls preload="metadata" src="2024/0104 (2)(5).mp4"
-      onloadedmetadata="loadVideoInfo(this, 'info3')"></video>
-  </div>
-
-  <div class="box">
-    <p><strong>Kaan</strong></p>
-    <p class="fileinfo" id="info4">Loading...</p>
-    <button onclick="toggleVideo(this)">[Expand File]</button>
-    <video controls preload="metadata" src="2024/bow.mp4"
-      onloadedmetadata="loadVideoInfo(this, 'info4')"></video>
-  </div>
-
-  <div class="box">
-    <p><strong>Kaan</strong></p>
-    <p class="fileinfo" id="info5">Loading...</p>
-    <button onclick="toggleVideo(this)">[Expand File]</button>
-    <video controls preload="metadata" src="2024/naamloos.webm"
-      onloadedmetadata="loadVideoInfo(this, 'info5')"></video>
-  </div>
-
-  <!-- ADD MORE LIKE ABOVE -->
 
 <script>
-  function toggleVideo(button) {
-    const vid = button.nextElementSibling;
+  function toggleFile(button) {
+    const img = button.nextElementSibling;
 
-    if (vid.style.maxWidth === "150px" || vid.style.maxWidth === "") {
-      vid.style.maxWidth = "500px";
-      vid.play();
+    if (img.style.maxWidth === "150px" || img.style.maxWidth === "") {
+      img.style.maxWidth = "500px";
     } else {
-      vid.style.maxWidth = "150px";
-      vid.pause();
+      img.style.maxWidth = "150px";
     }
   }
 
@@ -195,18 +205,24 @@ body{
     window.location.href = "index.html";
   }
 
-  function loadVideoInfo(video, id) {
+  async function loadInfo(img, id) {
     const info = document.getElementById(id);
-
     if (!info) return;
 
-    const width = video.videoWidth;
-    const height = video.videoHeight;
-    const duration = video.duration ? video.duration.toFixed(1) : "?";
-    const name = video.src.split('/').pop();
+    try {
+      const res = await fetch(img.src);
+      const blob = await res.blob();
 
-    info.textContent =
-      `File: ${name} (${width}x${height}, ${duration}s)`;
+      const size = (blob.size / 1024).toFixed(1);
+      const width = img.naturalWidth;
+      const height = img.naturalHeight;
+      const name = img.src.split('/').pop();
+
+      info.textContent =
+        `File: ${name} (${size} KB, ${width}x${height})`;
+    } catch {
+      info.textContent = "Failed to load info";
+    }
   }
 </script>
 
