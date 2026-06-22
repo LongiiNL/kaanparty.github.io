@@ -222,6 +222,14 @@ body{
     </video>
   </div>
 
+  <div class="box">
+    <p><strong>Kaan</strong></p>
+    <p class="fileinfo" id="info10">Loading...</p>
+    <button onclick="toggleMedia(this)">[Expand File]</button>
+    <img src="Pingu/razor.png"
+         onload="loadImageInfo(this, 'info10')">
+  </div>
+
 <script>
   function toggleMedia(button) {
     const el = button.nextElementSibling;
